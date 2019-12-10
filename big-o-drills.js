@@ -37,11 +37,11 @@ function areYouHere(arr1, arr2) {
     let tickj = 0;
     for (let i = 0; i < arr1.length; i++) {
         ticki++;
-        console.log('ticki', ticki);
+        // console.log('ticki', ticki);
         const el1 = arr1[i];
         for (let j = 0; j < arr2.length; j++) {
             tickj++;
-            console.log('tickj', tickj);
+            // console.log('tickj', tickj);
             const el2 = arr2[j];
             if (el1 === el2) return true;
         }
@@ -50,18 +50,19 @@ function areYouHere(arr1, arr2) {
 }
 areYouHere([1, 2, 3], [4, 5, 6]); // ==> 3,9 ticks
 areYouHere([1, 2, 3, 4, 5, 6], [7, 8, 9, 10, 11, 12]); // ==> 6,36 ticks
-//Polynomial time O(n^k)
+//Polynomial time O(n^2)
 //because this is nested loop
 //two levels of looping O(n^2)
 //dependent on value from first loop el1 
 //because the second loop compares that value to the value from the second loop el2
+//if the value of arr1 and arr2 are equal it will return true and exit
 
 //4 Doubler
 function doubleArrayValues(array) {
     let ticks = 0;
     for (let i = 0; i < array.length; i++) {
         ticks++;
-        console.log(ticks);
+        // console.log(ticks);
         array[i] *= 2;
     }
     return array;
@@ -179,3 +180,12 @@ function isWhat(n) {
 }
 //Linear time O(n)
 //output is dependent on the input, whether it is divisible or not
+
+//11 Tower of Hanoi
+function TOH(num, source, destination, temp) {
+    if (n === 1) {
+
+    }
+
+}
+TOH(1, 'A', 'C', 'B');
