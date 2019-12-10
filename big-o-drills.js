@@ -270,4 +270,28 @@ function fibonacci(n) {
     }
     return result;
 }
-console.log(fibonacci(7));
+console.log(fibonacci(6));
+
+//13. Recursive Big O
+    //13-1 Counting Sheep - Linear time O(n)
+    //13-2 powerCalculator - Constant time O(1)
+    //13-3 Reverse String - Linear time O(n)
+    //13-4 Triangular Number - Linear time O(n)
+    //13-5 String Splitter - Constant time O(1)
+    //13-6 Factorial - Linear time O(n)
+    //13-7 Fibonacci - O(2^n)
+    //13-8 Find a way out of the maze - Logarithmic time O(log(n))
+    //13-9 Find ALL the ways out of the maze - Exponential time O(4^n)
+    //13-10 Anagrams - Polynomial time O(n^2)
+    //13-11 Organization Chart - Linear time O(n)
+    //13-12  Binary Rep - Logarithmic time O(log(n))
+
+//14. Iterative Big O
+    //13-1 Counting Sheep - Linear time O(n)
+    //13-2 powerCalculator - Constant time O(1)
+    //13-3 Reverse String - Linear time O(n)
+    //13-4 Triangular Number - Linear time O(n)
+    //13-5 String Splitter - Constant time O(1)
+    //13-6 Factorial - Linear time O(n)
+    //13-7 Fibonacci - Linear time O(n)
+
