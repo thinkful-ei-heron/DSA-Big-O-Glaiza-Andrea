@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 /* eslint-disable no-console */
 /* eslint-disable eqeqeq */
 /* eslint-disable indent */
@@ -182,10 +183,91 @@ function isWhat(n) {
 //output is dependent on the input, whether it is divisible or not
 
 //11 Tower of Hanoi
-function TOH(num, source, destination, temp) {
-    if (n === 1) {
+function TOH(num, source, dest, temp) {
 
+    if (num === 1) {
+        print(num, source, dest);
+    }else{
+      TOH(num-1, source, temp, dest);
+        print(num, source,dest);
+      
+      TOH(num-1, temp, dest, source);
     }
+}
+
+function print(num, source,dest){
+    console.log(`For disk ${num} : moving ${source} ---> ${dest}`);
+}
+TOH(6, 'A', 'C', 'B');
+//Given 5 disks, the 7th call disk 1 is moving from A ---> C.
+//Given 3 disks, the total movements is 7.
+//Given 4 disks, the total movements is 15.
+//Given 5 disks, the total movements is 31.
+//O(2^n), the movements increase by power of 2
+
+
+//12 Iterative version
+//12-1 Counting Sheep
+function countSheep(num) {
+    for(let i=0; i<num; i++){
+        console.log(`${num-i}: Another sheep jump over the fence`);
+    }
+    return  console.log(`All sheep jumped over the fence`);
 
 }
-TOH(1, 'A', 'C', 'B');
+countSheep(3);
+
+//12-2 Write a function called `powerCalculator()`
+function powerTo(num, exponent) { 
+    return Math.pow(num, exponent); 
+}
+powerTo(5,2);
+
+//12-3 Reverse String
+function reverseString(str) {
+    let reverse = '';
+    for(let i=str.length-1; i>=0; i--) {
+        reverse += str.charAt(i);
+    }
+    return reverse;
+}
+reverseString('hello');
+
+//12-4 Triangular Number
+function triangle(n) {
+    let result = 0;
+    for(let i=1; i<=n; i++){
+        result += i;
+    }
+    return result;
+}
+triangle(5);
+
+//12-5 String Splitter
+function split(str, sep) {
+    return str.split(sep).join(' ');
+}
+split('02/20/2020','/');
+
+//12-6 Exercise 6 - Factorial
+function factorial(n) {  
+    let result=0;
+    for(let i=1; i<=n; i++){
+        result = n * i;
+    }
+    return result;
+}
+factorial(6);
+
+//12-7 Fibonacci
+function fibonacci(n) {
+    let res1 =0, res2=1, result=1;
+
+    for(let i=1; i<n; i++){
+        result = res1 + res2;
+        res1 = res2;
+        res2 = result;
+    }
+    return result;
+}
+console.log(fibonacci(7));
